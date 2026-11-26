@@ -30,3 +30,18 @@ body {
   --font-heading: 'Gambarino';
   --font-general: 'Satoshi';
 }
+
+.button-dashes {
+  vector-effect: non-scaling-stroke;
+}
+
+.group:hover .button-dashes {
+  animation: move-dashes 1s linear infinite;
+}
+
+@keyframes move-dashes {
+  to {
+    stroke-dashoffset: -28; /* one full dash + gap: 8 + 6, repeated twice */
+  }
+}
+
