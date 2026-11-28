@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="text-[#061500]">
-    <nav class="flex flex-row bg-white border border-zinc-200 justify-between align-middle py-4">
-        <div class="font-heading mx-4 flex flex-row items-center">
+    <nav class="relative flex flex-row w-full items-center bg-white border border-zinc-200 justify-between align-middle py-4 sm:px-6 lg:px-8">
+        <!-- logo -->
+        <div class="font-heading shrink-0 mx-4 flex flex-row items-center">
             <img src="#" alt="aduro-logo">
             <h1 class="text-2xl">Aduro</h1>
         </div>
-        <div class="flex w-1/2 flex-row items-center justify-between text-sm font-general">
+        <!-- desktop links -->
+        <div class="hidden lg:flex w-1/2 flex-row items-center justify-between text-sm font-general">
             <a href="#">Our Services</a>
             <a href="#">Properties</a>
             <a href="#">Company</a>
             <a href="#">Resources</a>
             <a href="#">Contact</a>
         </div>
-        <div class="mx-4">
-            <!-- <a href="#" class="group relative mx-4 inline-flex items-center overflow-hidden rounded-lg border-2 border-dashed border-[#7fba56cc] bg-[#d7ffc0] pl-4 pr-6 py-2 font-general text-sm">
-                <span class="transition-transform duration-300 group-hover:-translate-x-1"> Start Here </span>
-                <span aria-hidden="true" class="absolute right-3 translate-x-1 translate-y-1 rotate-0 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-45 group-hover:opacity-100">  </span>
-            </a> -->
-            <a href="#" class="group relative mx-4 inline-flex items-center overflow-hidden rounded-lg bg-[#d7ffc0] pl-4 pr-6 py-2 font-general text-sm hover:bg-[#cbf5ad]">
+        <!-- desktop cta -->
+        <div class="ml-auto mr-2 flex items-center lg:ml-0">
+            <a href="#" class="group relative mx-4 inline-flex items-center overflow-hidden rounded-lg bg-[#DCE8D8] pl-4 pr-6 py-2 font-general text-sm hover:bg-[#cbd7c7]">
                 <span class="transition-transform duration-300 group-hover:-translate-x-1 group-hover:text-[#061500]"> Start Here </span>
                 <span aria-hidden="true" class="absolute right-3 translate-x-1 translate-y-1 rotate-0 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-45 group-hover:opacity-100">→</span>
                 <svg aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full">
@@ -34,18 +33,120 @@
                     height="calc(100% - 2px)"
                     rx="6"
                     fill="none"
-                    stroke="#7fba56"
+                    stroke="#527A55"
                     stroke-width="1"
                     stroke-dasharray="4 4"
-                    class="button-dashes transition-colors duration-300 group-hover:stroke-[#659b3e]"
+                    class="button-dashes transition-colors duration-300 group-hover:stroke-[#476b49]"
                     />
                 </svg>
             </a>
         </div>
+        <!-- mobile/tablet menu button -->
+        <button
+            id="menu-toggle-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            class="mr-4 flex items-center justify-center rounded-md p-2 text-xl text-[#527A55] lg:hidden hover:cursor-pointer"
+            >
+            <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Mobile/tablet menu -->
+        <div id="mobile-menu" class="mx-2 pointer-events-none absolute left-0 right-0 top-full z-40 flex flex-col justify-center gap-4 border border-zinc-200 bg-white py-2 opacity-0 shadow-transition-opacity duration-300 lg:hidden">
+            <button
+                id="close-icon"
+                type="button"
+                aria-label="Close navigation menu"
+                class="absolute right-10 top-0 p-2 text-sm text-[#527A55]"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <nav class="flex flex-col items-center gap-4 text-lg font-general w-full">
+                <div class="border-b border-zinc-200 w-full p-3 text-xl text-[#527A55]">
+                    <a href="#" class="menu-link">Our Services</a>
+                </div>
+                <div class="border-b border-zinc-200 w-full p-3 text-xl text-[#527A55]">
+                    <a href="#" class="menu-link">Properties</a>
+                </div>
+                <div class="border-b border-zinc-200 w-full p-3 text-xl text-[#527A55]">
+                    <a href="#" class="menu-link">Company</a>
+                </div>
+                <div class="border-b border-zinc-200 w-full p-3 text-xl text-[#527A55]">
+                    <a href="#" class="menu-link">Resources</a>
+                </div>
+                <div class="border-b border-zinc-200 w-full p-3 text-xl text-[#527A55]">
+                    <a href="#" class="menu-link">Contact</a>
+                </div>
+            </nav>
+            <div class="w-[80%] bg-[#DCE8D8] rounded-lg flex flex-col justify-center mx-auto my-2 p-2 items-center">
+                <p class="font-heading text-xl text-[#527A55]">Make smarter</p>
+                <p class="italic font-heading text-xl text-[#6a9d6d]">property decisions</p>
+                <div class="w-full my-2 mx-auto">
+                    <a href="#" class="group relative flex w-full justify-center items-center overflow-hidden rounded-lg bg-[#DCE8D8] px-4 py-2 font-general text-sm text-[#17251C] transition-colors hover:bg-[#DCE8D8]">
+                        <span class="transition-transform duration-300 group-hover:-translate-x-1"> Book a Consultation </span>
+                        <span aria-hidden="true" class="absolute right-44 translate-x-1 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">↗</span>
+                        <svg aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full">
+                            <rect
+                            x="1" y="1"
+                            width="calc(100% - 2px)"
+                            height="calc(100% - 2px)"
+                            rx="6"
+                            fill="none"
+                            stroke="#527A55"
+                            stroke-width="1"
+                            stroke-dasharray="4 4"
+                            class="button-dashes transition-colors duration-300 group-hover:stroke-[#476b49]"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
     <!-- MAIN BODY -->
-    <div>
-        
+    <div class="bg-white border border-zinc-200 mx-8">
+        <!-- header -->
+        <div class="flex flex-col justify-center items-center w-full my-8">
+            <h1 class="font-heading text-7xl w-[55%] text-center my-4">Making Property Management <i class="text-[#527A55]">Simple</i></h1>
+            <p class="font-general w-[50%] text-center my-2">Real estate doesn't have to be complicated. At Aduro, we bring clarity to every property decision, helping you manage, invest and grow with confidence.</p>
+            <div class="flex flex-row justify-center my-3 w-[70%]">
+                <a href="#" class="group relative flex w-fit justify-center items-center overflow-hidden rounded-lg bg-[#DCE8D8] mx-2 px-6 py-2 font-general text-sm text-[#17251C] transition-colors hover:bg-[#DCE8D8]">
+                        <span class="transition-transform duration-300 group-hover:-translate-x-1"> Speak to a Property Expert </span>
+                        <span aria-hidden="true" class="absolute right-3 translate-x-1 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">↗</span>
+                        <svg aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full">
+                            <rect
+                            x="1" y="1"
+                            width="calc(100% - 2px)"
+                            height="calc(100% - 2px)"
+                            rx="6"
+                            fill="none"
+                            stroke="#527A55"
+                            stroke-width="1"
+                            stroke-dasharray="4 4"
+                            class="button-dashes transition-colors duration-300 group-hover:stroke-[#476b49]"
+                            />
+                        </svg>
+                    </a>
+                    <a href="#" class="group relative flex w-fit justify-center items-center overflow-hidden rounded-lg bg-white mx-2 px-5 py-2 font-general text-sm text-[#17251C] transition-colors">
+                        <span class="transition-transform duration-300 group-hover:-translate-x-1"> Book a Consultation </span>
+                        <span aria-hidden="true" class="absolute right-2 translate-x-1 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">↗</span>
+                        <svg aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full">
+                            <rect
+                            x="1" y="1"
+                            width="calc(100% - 2px)"
+                            height="calc(100% - 2px)"
+                            rx="6"
+                            fill="none"
+                            stroke="#17251C"
+                            stroke-width="1"
+                            stroke-dasharray="4 4"
+                            class="button-dashes transition-colors duration-300"
+                            />
+                        </svg>
+                    </a>
+            </div>
+        </div>
     </div>
 <script type="module" src="/js/main.js"></script>
 </body>
